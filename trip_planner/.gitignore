@@ -1,0 +1,40 @@
+# Environment files
+.env
+.env.*
+
+# Python cache / build
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+pip-wheel-metadata/
+
+# Testing
+.pytest_cache/
+
+# Type checkers
+.mypy_cache/
+
+# IDEs / editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Local user preferences or secrets
+knowledge/user_preference.txt
+

@@ -1,0 +1,8 @@
+vision_task:
+  description: >
+    Analyze the image at path: {image_path} and describe what it contains. 
+    Identify if it's a place, food item, object, or something else.
+  expected_output: >
+    A clear description in 8 lines of the image content including category (e.g., food, place, object).    
+  agent: vision_agent
+

@@ -1,0 +1,29 @@
+research_task:
+  description: >
+    Research a trip to {destination} for dates {start_date} to {end_date} — {total_days} days. Traveler interests: {interests}. 
+    Budget: {budget}. Use the web search tool also.
+    Gather top neighborhoods and areas to explore.
+    Identify 6–10 must-see attractions and 4–6 recommended food experiences.
+    Describe local transit options, airport transfer choices, and relevant city passes.
+    List seasonal events occurring during the travel dates, if any.
+    Provide practical notes on safety, tipping, and currency.
+    Summarize findings in clear bullet lists and include source titles with inline URLs where appropriate.
+  expected_output: >
+    Provide a structured research brief organized as bullet lists for neighborhoods, attractions, food, logistics, 
+    and tips, including source titles with inline URLs.
+  agent: research_agent
+
+plan_task:
+  description: >
+    Plan a detailed day-by-day itinerary for {destination}, covering the dates from {start_date} to {end_date} ({total_days} days). 
+    Tailor the schedule to reflect traveler interests: {interests} and budget: {budget}.
+    Group activities by geographic area to minimize transit time
+    Include 3–5 activities per day with time blocks
+    Add brief summaries and practical notes (e.g., ticket requirements, ideal visiting hours)
+    Conclude with packing suggestions and essential local information
+    Return the itinerary as a valid Itinerary (Pydantic JSON schema).
+  expected_output: >
+    Generate a JSON object that conforms to the Itinerary schema, including structured fields for daily_plan activities, 
+    packing_tips, and local_basics.
+  agent: planner_agent
+  context: [research_task]
